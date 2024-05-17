@@ -17,6 +17,18 @@ html,body{
     width: 100%;
     padding-right: 15px;
     padding-left: 15px;
-    background: map.get($theme-color, "main");
+    // background: map.get($theme-color, "");
     margin: auto;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap; // tran het dien tich thi dua xuong phia duoi
+
+}
+
+.col-6{
+    flex:  0 0 50%;
+    max-width: 50%;
+    
 }

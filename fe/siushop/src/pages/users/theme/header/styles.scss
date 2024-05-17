@@ -1,3 +1,70 @@
+
+@use "sass:map";
+@import "styles/pages/theme";
+
 .header-top{
-    background: red;
+    background: #f5f5f5;
+}
+.header-top-left{
+    
+    ul{
+        display: flex;
+        align-items: center;
+        list-style: none;
+        padding: 10px 0 13px;
+        column-gap: 20px;
+
+        li{
+            font-size: 14px;
+            color: map.get($theme-color, "normal-text");
+            display: flex;
+            align-items: center;
+            column-gap: 10px;
+        }
+        li:first-child{
+            position: relative;
+            //Tao dau soc doc
+            &::after{
+                position: absolute;
+                right: -10px;
+                top: 1px;
+                height: 20px;
+                width: 1px;
+                background: #000000;
+                opacity: 0.1;
+                content: "";
+            }
+        }
+    }
+
+}
+.header-top-right{
+
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    ul{
+        display: flex;
+        column-gap: 10px;
+        list-style: none;
+        padding: 10px 0  13px;
+
+        a{
+            font-size: 14px;
+            display: inline-block;
+            color: map.get($theme-color, "normal-text");
+        }
+
+        li:last-child{
+            cursor: pointer;
+            margin-left: 10px;
+            span{
+                font-size: 14px;
+                margin-left: 2px;
+            }
+        }
+
+    }
+
+    
 }
