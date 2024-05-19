@@ -1,0 +1,35 @@
+$DESKTOP: "DESKTOP";
+$MEDIUM_DEVICE: "MEDIUM_DEVICE";
+$TABLET_DEVICE: "TABLET_DEVICE";
+$WIDE_MOBILE: "WIDE_MOBILE";
+$SMALL_DIVICES: "SMALL_DEVICES";
+
+@mixin Responsive($canvas){
+    @if $canvas== $DESKTOP{
+        //Desktop la khi man hinh co man hinh do rong nho nhat la 1200px thi nhan tat ca nhung css o trong
+        @media only screen and  (min-width:1200px){
+            @content;
+        }
+    }@else if $canvas == $MEDIUM_DEVICE{
+        
+        @media screen and (min-width:992px) and (max-width:1199px) {
+            @content
+        }
+    }@else if $canvas == $TABLET_DEVICE{
+        // May tinh bang
+        
+        @media screen and (min-width:768px) and (max-width:991px) {
+            @content
+        }
+    }@else if $canvas == $WIDE_MOBILE{
+        
+        @media screen and (max-width:767px) {
+            @content
+        }
+    }@else if $canvas == $SMALL_DIVICES{
+        @media screen and (max-width:675px) {
+            @content
+        }
+    }
+}
+
